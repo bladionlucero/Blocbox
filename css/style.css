@@ -386,8 +386,12 @@
  .left-nav {
    height: 100%;
    width: 280px;
+   color: #FFFFFF;
+   background: #34495E;
+   background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+   float:left;
    position: absolute;
-     -webkit-transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
@@ -420,6 +424,33 @@
    border-radius: 4px;
    left: 5px;
    top: 15px;
+ }
+
+  @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: #34495E;
+     background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
  }
 
  .left-nav .site-logo {
@@ -611,30 +642,4 @@
 
  .left-nav .active {
   background-color: #2ECC71;
- }
- @media (min-width:992px) {
-   .left-nav {
-     height: 100vh;
-     width:14.66666667%;
-     color:#FFFFFF;
-     background: #34495E;
-     background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
-     float:left;
-     position: fixed;
-     display:block;
-     transform: translate(0,0);
-     -webkit-transform: translate(0,0); /** Chrome & Safari **/
-     -o-transform: translate(0,0); /** Opera **/
-     -moz-transform: translate(0,0); /** Firefox **/
-   }
-   .left-nav.open {
-     width:14.66666667%;
-     transform: translate(0,0);
-     -webkit-transform: translate(0,0); /** Chrome & Safari **/
-     -o-transform: translate(0,0); /** Opera **/
-     -moz-transform: translate(0,0); /** Firefox **/
-   }
-   .hamburger {
-     display:none;
-   }
  }
